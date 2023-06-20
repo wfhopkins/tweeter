@@ -1,0 +1,9 @@
+.tweet-and-count {
+  display: flex;
+  border-bottom: #555555;
+}
+
+.new-tweet {
+  display: flex;
+  justify-content: space-between;
+}
