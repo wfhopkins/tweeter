@@ -29,6 +29,15 @@ body {
 
 .container {
   border: 1px solid red;
+  display: flex;
+  flex-direction: row;
   width: 90%;
   background-color: #f4f1ec;
+}
+
+
+body {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
