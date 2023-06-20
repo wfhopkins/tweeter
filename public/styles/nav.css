@@ -18,8 +18,18 @@ nav {
 
 .write {
   border: 1px solid red;
-  display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Source Sans 3', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+.new-tweet-group {
+  display: flex;
+  flex-direction: column;
+}
+.fa-solid {
+  color: #e01010;
 }
