@@ -1,9 +1,32 @@
 .tweet-and-count {
   display: flex;
-  border-bottom: #555555;
+  justify-content: space-between;
+  margin-top: 0.5em;
+  font-family: "Bungee";
 }
 
 .new-tweet {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px;
 }
+
+textarea#tweet-text {
+  display: flex;
+  margin-top: 0.5em;
+  font-weight: bold;
+  background-color: #f4f1ec;
+  width: 100%;
+  border: none;
+  resize: none;
+  border-bottom-color: #555555;
+  border-bottom-style: solid; 
+  border-bottom-width: 5px;
+}
+
+button {
+  background-color: #4056a1;
+  color: #FFFFFF;
+}
+
