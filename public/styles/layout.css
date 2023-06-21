@@ -32,10 +32,6 @@ body {
   margin: 0 auto;
   background-color: #f4f1ec;
   justify-content: center;
-  flex-direction: row;
-}
-
-.new-tweet {
-  /* border: 1px solid red; */
+  flex-direction: column;
 }
 

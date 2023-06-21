@@ -26,7 +26,13 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    
+    <!-- ???? unsure if necessary. had imported from @link https://api.jquery.com/text/
+    attempting to make the char counter change. script no longer in html tho-->
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  
+
+
   </head>
 
   <body>
@@ -39,7 +45,7 @@
       </div>
     </nav>
     
-  <header>
+  <header id="primary">
     <div class="avatar">
         <img src="/images/profile-hex.png"> 
     </div>
@@ -53,7 +59,7 @@
 
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="main-container">
       <section class="new-tweet">
         <form method="POST" action="/tweets">
           <div>
@@ -66,6 +72,11 @@
           </div>
         </form>
       </section>
+      <article>
+        <header>Avi and Name -------------- @handle</header>
+          <p>Where the tweets will go</p>
+        <footer>When ---------------- interaction icons</footer>
+      </article>
     </main>
   </body>
 </html>
