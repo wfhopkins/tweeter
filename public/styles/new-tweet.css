@@ -20,9 +20,13 @@ textarea#tweet-text {
   width: 100%;
   border: none;
   resize: none;
-  border-bottom-color: #555555;
-  border-bottom-style: solid; 
-  border-bottom-width: 5px;
+}
+
+hr {
+  color: #555555;
+  background-color: #555555;
+  border-style: solid;
+  height: 4px;
 }
 
 button {
@@ -32,4 +36,20 @@ button {
 
 .counter.exceeded {
   color: red;
+}
+
+article {
+  border: red 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
 }

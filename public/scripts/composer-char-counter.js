@@ -17,6 +17,8 @@
 //   });
 // });
 
+// Modern shorthand for doc.ready
+// $(()=>){--code goes here--};
 $(document).ready(function() {
   console.log("Ready");
 
