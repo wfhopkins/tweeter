@@ -66,6 +66,21 @@ footer {
   justify-content: space-between;
 }
 
+/* ICONS*/
+.icons {
+  color: #4056a1;
+}
+
+.flag:hover {
+  color: gold;
+}
+
+.retweet:hover {
+  color: gold;
+}
+.heart:hover {
+  color: gold;
+}
 
 
 
