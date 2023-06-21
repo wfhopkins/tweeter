@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 200px;
   padding: 5px;
 }
 
@@ -27,6 +28,7 @@ hr {
   background-color: #555555;
   border-style: solid;
   height: 4px;
+  width: 100%;
 }
 
 button {
@@ -39,10 +41,20 @@ button {
 }
 
 article {
-  border: red 5px;
+  margin: 10px 0;
+  border: #555555 4px;
+  border-style: solid;
   display: flex;
   flex-direction: column;
+  padding: 0.5em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
 }
+
+article:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
 
 header {
   display: flex;
@@ -53,3 +65,13 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
+
+
+
+/* icons
+<i class="fa-solid fa-flag"></i>
+
+<i class="fa-sharp fa-solid fa-retweet"></i>
+
+<i class="fa-solid fa-heart"></i> */
