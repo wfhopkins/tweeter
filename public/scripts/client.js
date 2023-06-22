@@ -4,13 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 // doc.ready check before function calls
 $(()=> {
-  // renderTweets(data);
-  $("form").on("submit", onSubmit);
-  loadTweets();
-});
+
 
 const createTweetElement = (tweet) => {
   const $tweet = $(`
@@ -23,7 +19,7 @@ const createTweetElement = (tweet) => {
       <p class="tweet-content">${tweet.content.text}</p>
       <hr/>
       <footer>
-        <span class="days">${tweet.created_at}</span><span class="icons">
+        <span class="days">${timeago.format(tweet.created_at)}</span><span class="icons">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-sharp fa-solid fa-retweet"></i>
           <i class="fa-solid fa-heart"></i>
@@ -58,12 +54,19 @@ const loadTweets = function() {
     }
   })
 }
-
-
 const onSubmit = function(event) {
+  const tweetText = $("#tweet-text").val();
   event.preventDefault();
+  if (tweetText.length === 0) {
+    alert("Tweet cannot be empty");
+    return;
+  }
+  if (tweetText.length > 140) {
+    alert("Tweet is over 140 characters");
+    return;
+  }
   $.ajax({
-    url: "http://localhost:8080/tweets",
+    url: "/tweets",
     method: "POST",
     data: $(this).serialize(),
     success: (data) => {
@@ -75,3 +78,7 @@ const onSubmit = function(event) {
     },
   });
 }
+
+$("form").on("submit", onSubmit);
+loadTweets();
+});
