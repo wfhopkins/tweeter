@@ -27,12 +27,14 @@ $(document).ready(function() {
     console.log(inputLength);
     let charsLeft = 140 - inputLength;
 
+    const $counter = $(this).closest('.container').find('.counter');
+    
     if (charsLeft < 0) {
-      $(this).closest('.container').find('.counter').addClass("exceeded");
+      $counter.addClass("exceeded");
     } else {
-      $(this).closest('.container').find('.counter').removeClass("exceeded");
+      $counter.removeClass("exceeded");
     }
 
-    $(this).closest('.container').find('.counter').text(charsLeft);
+    $counter.text(charsLeft);
   });
 });

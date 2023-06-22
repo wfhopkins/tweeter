@@ -4,21 +4,21 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const createTweetElement = (tweetData) => {
+const createTweetElement = (tweet) => {
   const $tweet = $(`
   
     <article class="tweet">
       <header>
-        <span class="user-avi"><img src="${tweetData.user.avatars}"></span><span class="user-name">${tweetData.user.name}</span>
-        <span class="handle">${tweetData.user.handle}</span>
+        <span class="user-avi"><img src="${tweet.user.avatars}"></span><span class="user-name">${tweet.user.name}</span>
+        <span class="handle">${tweet.user.handle}</span>
       </header>
-      <p class="tweet-content">${tweetData.content.text}</p>
+      <p class="tweet-content">${tweet.content.text}</p>
       <hr/>
       <footer>
-        <span class="days">${tweetData.created_at}</span><span class="icons">
-          <i class="fa-solid fa-flag flag"></i>
-          <i class="fa-sharp fa-solid fa-retweet retweet"></i>
-          <i class="fa-solid fa-heart heart"></i>
+        <span class="days">${tweet.created_at}</span><span class="icons">
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-sharp fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
         </span>
       </footer>
     </article>
@@ -28,9 +28,9 @@ const createTweetElement = (tweetData) => {
 }
 
 
-const renderTweets = (tweetDataArray) => {
-  for (const tweetData of tweetDataArray) {
-    const $tweet = createTweetElement(tweetData);
+const renderTweets = (tweets) => {
+  for (const tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
     $(".tweets-container").append($tweet);
   }
 }
@@ -38,7 +38,7 @@ const renderTweets = (tweetDataArray) => {
 
 
 
-const tweetDataArray = [
+const data = [
   {
   "user": {
     "name": "Newton",
@@ -65,7 +65,5 @@ const tweetDataArray = [
 
 // doc.ready check before function calls
 $(()=> {
-  // const $tweet = createTweetElement(tweetData);
-  renderTweets(tweetDataArray);
-  // $(".tweets-container").append($tweet);
+  renderTweets(data);
 });

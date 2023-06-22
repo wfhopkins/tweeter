@@ -67,7 +67,11 @@ footer {
   color: #4056a1;
 }
 
-.flag:hover {
+i:hover {
+  color:gold;
+}
+
+/* .flag:hover {
   color: gold;
 }
 
@@ -76,7 +80,7 @@ footer {
 }
 .heart:hover {
   color: gold;
-}
+} */
 
 
 
