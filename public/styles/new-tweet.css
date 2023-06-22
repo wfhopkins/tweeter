@@ -40,24 +40,20 @@ button {
   color: red;
 }
 
-article {
+.tweets-container {
   margin: 10px 0;
-  border: #555555 4px;
-  border-style: solid;
   display: flex;
   flex-direction: column;
-  padding: 0.5em;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease-in-out;
 }
 
-article:hover {
+.tweet:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
