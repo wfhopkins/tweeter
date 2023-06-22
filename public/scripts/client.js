@@ -5,6 +5,13 @@
  */
 
 
+// doc.ready check before function calls
+$(()=> {
+  // renderTweets(data);
+  $("form").on("submit", onSubmit);
+  loadTweets();
+});
+
 const createTweetElement = (tweet) => {
   const $tweet = $(`
   
@@ -30,58 +37,41 @@ const createTweetElement = (tweet) => {
 
 
 const renderTweets = (tweets) => {
+  $(".tweets-container").empty();
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $(".tweets-container").append($tweet);
+    $(".tweets-container").prepend($tweet);
   }
 };
 
 
-
-
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
+const loadTweets = function() {
+  $.ajax({
+    url: "http://localhost:8080/tweets",
+    method: "GET",
+    success: function(tweets) {
+      console.log("Success: ", "tweets: ", tweets);
+      renderTweets(tweets);
   },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1687291163676
-  }
-];
+    error: function(error) {
+      console.log("Error: ", error);
+    }
+  })
+}
 
-// doc.ready check before function calls
-$(()=> {
-  renderTweets(data);
-});
 
-$("form").on("submit", function(event) {
+const onSubmit = function(event) {
   event.preventDefault();
-  console.log(data);
   $.ajax({
     url: "http://localhost:8080/tweets",
     method: "POST",
-    dataType: "json",
     data: $(this).serialize(),
     success: (data) => {
-      console.log("this request was a success, here\'s the data", data)
+      console.log("this request was a success")
+      loadTweets();
     },
     error: (error) => {
       console.log("this request failed, here is the error", error)
     },
   });
-});
+}
