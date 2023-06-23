@@ -37,7 +37,7 @@ nav {
   color: #e01010;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
   nav {
   background-color: #3d8b91;
   background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
