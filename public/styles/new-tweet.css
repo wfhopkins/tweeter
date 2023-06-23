@@ -74,6 +74,7 @@ footer {
   color: gold;
 }
 
+/* Error Banner */
 .error-popup {
   display: none;
   justify-content: center;

@@ -19,3 +19,5 @@ $(document).ready(function() {
     $counter.text(charsLeft);
   });
 });
+
+// $counter.toggleClass("exceeded", charsLeft < 0);
