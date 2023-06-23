@@ -16,7 +16,7 @@ const createTweetElement = (tweet) => {
         <span class="user-avi"><img src="${tweet.user.avatars}"></span><span class="user-name">${tweet.user.name}</span>
         <span class="handle">${tweet.user.handle}</span>
       </header>
-      <p class="tweet-content">${tweet.content.text}</p>
+      <p class="tweet-content">${escape(tweet.content.text)}</p>
       <hr/>
       <footer>
         <span class="days">${timeago.format(tweet.created_at)}</span><span class="icons">
@@ -55,14 +55,25 @@ const loadTweets = function() {
   })
 }
 const onSubmit = function(event) {
-  const tweetText = $("#tweet-text").val();
+  const tweetText = $("#tweet-text").val().trim();
+  $(".error-popup").slideUp();
   event.preventDefault();
   if (tweetText.length === 0) {
-    alert("Tweet cannot be empty");
+    $(".error-text").text("Tweet cannot be empty");
+    $(".error-popup").slideDown({start: function(){
+      $(this).css({
+        display: "flex"
+      })
+    }});
     return;
   }
   if (tweetText.length > 140) {
-    alert("Tweet is over 140 characters");
+    $(".error-text").text("Tweet is over 140 characters");
+    $(".error-popup").slideDown({start: function(){
+      $(this).css({
+        display: "flex"
+      })
+    }});
     return;
   }
   $.ajax({
@@ -78,6 +89,14 @@ const onSubmit = function(event) {
     },
   });
 }
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
 
 $("form").on("submit", onSubmit);
 loadTweets();

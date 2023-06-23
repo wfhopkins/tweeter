@@ -73,3 +73,22 @@ footer {
 .fa-heart:hover {
   color: gold;
 }
+
+.error-popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: red 5px;
+  border-style: solid;
+  padding: 1px;
+  color: red;
+  font-weight: bold;
+}
+
+.error-text {
+  margin: 0px;
+}
+
+.fa-triangle-exclamation {
+  color: red;
+}

@@ -60,7 +60,12 @@
     <!-- Page-specific (main) content here -->
     <main class="container" id="main-container">
       <section class="new-tweet">
-        <form method="POST" action="/tweets">
+        <label class="error-popup">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+            <p class="error-text">Error Messages</p>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </label>
+          <form method="POST" action="/tweets">
           <div>
             <label for="tweet-text"></label>
             <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
