@@ -35,3 +35,26 @@ body {
   flex-direction: column;
 }
 
+
+
+
+@media screen and (min-width: 768px) {
+  .contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 240px;
+    padding: 0px 40px;
+    gap: 60px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .contents {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    padding: 5px;
+    gap: 0;
+  }
+}

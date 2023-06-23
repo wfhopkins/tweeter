@@ -1,4 +1,6 @@
 nav {
+  top: 0;
+  left: 0;
   position: fixed;
   width: 100%;
   display: flex;
@@ -33,4 +35,11 @@ nav {
 }
 .arrows {
   color: #e01010;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+  background-color: #3d8b91;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+  }
 }
