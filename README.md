@@ -5,8 +5,13 @@ Tweeter is a simple, single-page Twitter clone.
 
 ##Screenshots
 
+###Desktop View
 ![Screenshot of Desktop View](https://github.com/wfhopkins/tweeter/blob/master/docs/desktop-view.png?raw=true)
+
+###Mobile View
 ![Screenshot of Mobile View](https://github.com/wfhopkins/tweeter/blob/master/docs/mobile-view.png?raw=true)
+
+###Mobile Feed
 ![Screenshot of Mobile View scrolled down Feed](https://github.com/wfhopkins/tweeter/blob/master/docs/tweet-feed-mobile.png?raw=true)
 
 
