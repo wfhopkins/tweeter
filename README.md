@@ -15,11 +15,6 @@ Tweeter is a simple, single-page Twitter clone.
 ![Screenshot of Mobile View scrolled down Feed](https://github.com/wfhopkins/tweeter/blob/master/docs/tweet-feed-mobile.png?raw=true)
 
 
-
-
-
-
-
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
