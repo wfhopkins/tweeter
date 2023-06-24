@@ -79,11 +79,11 @@ footer {
 /* Error Banner */
 .error-popup {
   display: none;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border: red 5px;
   border-style: solid;
-  padding: 1px;
+  padding: 5px;
   color: red;
   font-weight: bold;
 }

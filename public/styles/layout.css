@@ -20,11 +20,8 @@ body {
   font-size: 24px;
   font-family: 'Source Sans 3', sans-serif;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
+ 
+/* Tweet Feed */
 .container {
   display: flex;
   width: 90%;
@@ -34,7 +31,7 @@ body {
   flex-direction: column;
 }
 
-
+/* Holds Avatar/background and Tweet Feed */
 .contents {
   display: flex;
   flex-direction: row;
@@ -44,6 +41,7 @@ body {
   gap: 60px;
 }
 
+/* Mobile Styles */
 @media only screen and (max-width: 767px) {
   .contents {
     display: flex;

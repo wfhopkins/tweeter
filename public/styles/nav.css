@@ -12,11 +12,13 @@ nav {
   padding: 0 1.5em;
 }
 
+/* Tweeter top left */
 .title {
   font-size: 2.25em;
   font-family: "Bungee";
 }
 
+/* Text Block top right */
 .write {
   flex-direction: column;
   align-items: center;
