@@ -12,4 +12,7 @@
   margin-left: 5px;
 }
 
-
+/* Prevent extra long tweets from ruining formatting */
+p.tweet-content {
+  overflow-wrap: break-word;
+}

@@ -1,3 +1,4 @@
+/* Tweet Box Contents */
 .tweet-and-count {
   display: flex;
   justify-content: space-between;
@@ -40,6 +41,7 @@ button {
   color: red;
 }
 
+/* Tweet Box */
 .tweets-container {
   margin: 10px 0;
   display: flex;

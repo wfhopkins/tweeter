@@ -26,7 +26,6 @@ body {
  */
 
 .container {
-  /* border: 1px solid red; */
   display: flex;
   width: 90%;
   margin: 0 auto;
@@ -36,7 +35,15 @@ body {
 }
 
 
-/* Mobile Styles */
+.contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 200px;
+  padding: 0px 40px;
+  gap: 60px;
+}
+
 @media only screen and (max-width: 767px) {
   .contents {
     display: flex;
@@ -44,18 +51,5 @@ body {
     margin-top: 0px;
     padding: 5px;
     gap: 0px;
-  }
-}
-
-
-/* Tablet and Desktop Styles */
-@media only screen and (min-width: 768px) {
-  .contents {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 200px;
-    padding: 0px 40px;
-    gap: 60px;
   }
 }

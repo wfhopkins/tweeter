@@ -1,12 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 // doc.ready check before function calls
 $(()=> {
-
 
 const createTweetElement = (tweet) => {
   const $tweet = $(`
@@ -27,10 +20,8 @@ const createTweetElement = (tweet) => {
       </footer>
     </article>
   `);
-
   return $tweet;
 };
-
 
 const renderTweets = (tweets) => {
   $(".tweets-container").empty();
@@ -39,7 +30,6 @@ const renderTweets = (tweets) => {
     $(".tweets-container").prepend($tweet);
   }
 };
-
 
 const loadTweets = function() {
   $.ajax({
@@ -54,6 +44,7 @@ const loadTweets = function() {
     }
   })
 }
+
 const onSubmit = function(event) {
   const tweetText = $("#tweet-text").val().trim();
   $(".error-popup").slideUp();
@@ -81,6 +72,8 @@ const onSubmit = function(event) {
     method: "POST",
     data: $(this).serialize(),
     success: (data) => {
+      $("#tweet-text").val("");
+      $(".counter").text(140) 
       console.log("this request was a success")
       loadTweets();
     },
@@ -90,6 +83,7 @@ const onSubmit = function(event) {
   });
 }
 
+// Protects from running code input by user
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));

@@ -1,5 +1,4 @@
-// shorthand for doc.ready
-// $(()=>){--code goes here--};
+// Character Counter
 $(document).ready(function() {
   console.log("Ready");
 
@@ -19,5 +18,3 @@ $(document).ready(function() {
     $counter.text(charsLeft);
   });
 });
-
-// $counter.toggleClass("exceeded", charsLeft < 0);
